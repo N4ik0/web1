@@ -1,0 +1,100 @@
+/* Estilo general */
+.services {
+    background: #f8f9fa;
+    padding: 4rem 0;
+  }
+  
+  .services-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.25rem;
+    color: var(--primary);
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .service-title {
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+  
+  .service-description {
+    color: var(--text);
+  }
+  
+  /* Servicios 2 */
+  .services2 {
+    background: var(--primary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    align-items: stretch;
+    justify-content: center;
+    padding: 4rem 4rem;
+  }
+  
+  .service-left-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    grid-row: span 2;
+  }
+  
+  .service-left-card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-left-card p {
+    color: var(--text);
+  }
+  
+  .service-right-card {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-right-card h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .service-right-card p {
+    color: var(--text);
+  }
+  
+  /* Responsivo: Apila tarjetas en pantallas pequeñas */
+  @media (max-width: 768px) {
+    .services2 {
+      grid-template-columns: 1fr;
+    }
+  
+    .service-left-card {
+      grid-row: auto;
+    }
+  }
+  

@@ -1,5 +1,5 @@
 .hero {
-    background: linear-gradient(to top, rgba(24, 39, 136, 1), rgba(61, 82, 213, 0.3)),
+    background: linear-gradient(to top, rgba(24, 39, 136, 1), rgba(172, 183, 255, 0.2)),
       url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
     background-size: cover;
     background-position: center;
@@ -27,12 +27,13 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background: white;
-    color: var(--primary);
+    background: var(--secondary);
+    color: black;
     transition: transform 0.3s ease;
   }
   
 
   .hero .button-primary:hover {
     transform: scale(1.1);
+    background-color: white;
   }

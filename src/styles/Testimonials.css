@@ -1,11 +1,14 @@
 /* Estructura general */
 .testimonial-page {
+  background-color: #f8f9fa;
   position: relative;
   overflow: hidden; /* Evita que se desborde el SVG */
+  z-index: -1;
 }
 
 /* Fondo SVG curvo detrás del slider */
 .curve-background {
+  background-color: #f8f9fa;
   position: absolute;
   top: 0;
   left: 0;

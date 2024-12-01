@@ -24,6 +24,7 @@
   max-width: 1200px;
   margin: 0 auto;
   gap: 3rem; /* Espacio adicional entre los elementos */
+  font-size: 1.1rem;
 }
 
 .navbar-logo {
@@ -83,6 +84,16 @@
   padding: 0.5rem 1rem;
   border-radius: 10px;
   text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.3s ease;
+  font-weight: 400;
+}
+
+.navbar-contact:hover{
+  border-color: var(--primary);
+  color: var(--primary);
+  background-color: var(--white);
+  transform: scale(1.05);
 }
 
 .navbar-contact.sticky{
@@ -94,6 +105,12 @@
   padding: 0.5rem 1rem;
   border-radius: 10px;
   text-decoration: none;
+}
+
+.navbar-contact.sticky:hover{
+  color: var(--primary);
+  background-color: var(--white);
+  transform: scale(1.05);
 }
 
 .menu-button {

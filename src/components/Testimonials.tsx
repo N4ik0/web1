@@ -31,10 +31,11 @@ export default function Testimonials() {
         preserveAspectRatio="none"
       >
         <path
-          fill="#f8f9fa"
-          d="M0,96L80,128C160,160,320,224,480,256C640,288,800,288,960,256C1120,224,1280,160,1360,128L1440,96L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"
+          fill="#ffffff"
+          d="M0,0L80,0C160,0,320,0,480,0C640,0,800,0,960,0C1120,0,1280,0,1360,0L1440,0L1440,320L1360,288C1280,256,1120,192,960,160C800,128,640,128,480,160C320,192,160,256,80,288L0,320Z"
         ></path>
       </svg>
+
 
       {/* Contenedor del slider */}
       <div className="testimonial-carousel">

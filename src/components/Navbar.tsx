@@ -9,7 +9,7 @@ export default function Navbar() {
 
   // Manejo del evento de scroll
   useEffect(() => {
-    const handleScroll = () => setIsSticky(window.scrollY > 100);
+    const handleScroll = () => setIsSticky(window.scrollY > 250);
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);

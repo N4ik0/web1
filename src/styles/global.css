@@ -1,14 +1,16 @@
 :root {
   --primary: #112397;
-  --secondary: #F18F01;
+  --secondary: #ee8002;
+  --secondary-light: #ffa51f;
+  --title-primary: #0b1763;
   --text: #2B2B2B;
   --white: #ffffff;
 }
 
 * {
+  font-family: Jost, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -17,6 +19,8 @@ body {
   line-height: 1.6;
   color: var(--text);
   background-color: var(--white);
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .container {
@@ -28,7 +32,7 @@ body {
 .button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  border-radius: 12px;
+  border-radius: 14px;
   text-decoration: none;
   font-weight: 600;
   cursor: pointer;
@@ -43,10 +47,10 @@ body {
 }
 
 .button-primary:hover {
-  background-color: var(--white);
-  color: var(--primary);
-  outline: 2px solid var(--primary);
-  transform: scale(1.03);
+  background-color: var(--secondary-light);
+  /*color: var(--primary);
+  outline: 2px solid var(--primary);*/
+  transform: scale(1.1);
 }
 
 section {

@@ -67,6 +67,9 @@ export default function Services() {
           </p>
         </div>
       </div>
+      <div className='separador'>
+
+      </div>
     </section>
   );
 }

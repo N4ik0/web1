@@ -3,7 +3,7 @@
   background-color: #f8f9fa;
   position: relative;
   overflow: hidden; /* Evita que se desborde el SVG */
-  z-index: -1;
+  z-index: 1;
 }
 
 /* Fondo SVG curvo detrás del slider */
@@ -26,7 +26,7 @@
   max-width: 80%;
   margin: 0 auto;
   position: relative;
-  z-index: 1; /* Asegura que esté sobre el fondo */
+  z-index: 2; /* Asegura que esté sobre el fondo */
 }
 
 .testimonial-container {
@@ -82,7 +82,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #ddd;
+  background: white;
   cursor: pointer;
 }
 

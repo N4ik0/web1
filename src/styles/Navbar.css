@@ -1,4 +1,5 @@
 .navbar {
+  padding: 0;
   position: fixed; /* Fija el navbar al inicio */
   top: 0;
   width: 100%;
@@ -6,7 +7,6 @@
   background-color: transparent; /* Fondo transparente por defecto */
   color: white;
   transition: background-color 0.3s ease, color 0.3s ease;
-  padding: 1rem 2rem;
 }
 
 .navbar.sticky {
@@ -100,7 +100,8 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--text);
+  color: var(--white);
+  font-weight: 500;
   background-color: var(--secondary);
   padding: 0.5rem 1rem;
   border-radius: 10px;
@@ -149,8 +150,8 @@
   }
 
   .navbar-menu {
-    display: none;
     position: absolute;
+    visibility: hidden;
     top: 80px;
     left: 0;
     right: 0;
@@ -160,13 +161,21 @@
     padding: 1rem;
     gap: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.5s ease, transform 0.3s ease;
   }
-
   .navbar-menu.active {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 
   .navbar-link {
     text-align: center;
+    color: var(--text);
   }
 }

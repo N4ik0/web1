@@ -1,6 +1,6 @@
 .hero {
     background: linear-gradient(to top, rgba(24, 39, 136, 1), rgba(172, 183, 255, 0.2)),
-      url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+    url("../assets/images/main1.jpg");
     background-size: cover;
     background-position: center;
     color: white;
@@ -8,6 +8,9 @@
     padding-bottom: 5rem;
     text-align: center;
   }
+
+  /* imagen stock para utilizar
+  url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"); */
   
   .hero h1 {
     font-size: 3.5rem;
@@ -28,12 +31,11 @@
     align-items: center;
     gap: 0.5rem;
     background: var(--secondary);
-    color: black;
+    color: white;
     transition: transform 0.3s ease;
   }
   
 
   .hero .button-primary:hover {
-    transform: scale(1.1);
-    background-color: white;
+    background-color: var(--secondary-light);
   }

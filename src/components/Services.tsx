@@ -46,25 +46,37 @@ export default function Services() {
         </div>
 
         {/* Tarjetas Derechas */}
-        <div className="service-right-card">
-          <div className="service-icon">
-            <User size={40} />
-          </div>
-          <h3>Soluciones para Persona Natural</h3>
+        <div className="service-right-card one">
+          
+          <h3>
+            <div className="service-icon">
+              <User size={40} color='white' />
+            </div>
+            Soluciones para Persona Natural
+          </h3>
           <p>
             Diseñadas para adaptarse a las necesidades individuales, ofrecemos
             soluciones legales y financieras efectivas para personas naturales.
           </p>
-        </div>
-        <div className="service-right-card">
-          <div className="service-icon">
-            <Building size={40} />
+          <div className="button button-primary service">
+            Más Información
           </div>
-          <h3>Soluciones para Empresa o Pyme</h3>
+        </div>
+        <div className="service-right-card two">
+          
+          <h3>
+            <div className="service-icon">
+              <Building size={40} color='white'/>
+            </div>
+            Soluciones para Empresa o Pyme
+          </h3>
           <p>
             Brindamos asesoría y representación para empresas y pymes,
             garantizando estrategias efectivas para superar desafíos financieros.
           </p>
+          <div className="button button-primary service">
+            Más Información
+          </div>
         </div>
       </div>
       <div className='separador'>

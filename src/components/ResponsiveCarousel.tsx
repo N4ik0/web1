@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import './ResponsiveCarousel.css';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './Carousel.css';
 
 import antofagasta from '../assets/images/antofagasta.jpg';
 import concepcion from '../assets/images/concepcion.jpg';
@@ -19,58 +20,67 @@ const images = [
   { src: santiago, alt: 'Santiago', legend: 'Santiago' },
 ];
 
-const ResponsiveCarousel: React.FC = () => {
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [slidePercentage, setSlidePercentage] = useState(33.33);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    // Ajusta el porcentaje de las tarjetas según el tamaño de la ventana
-    if (windowWidth <= 768) {
-      setSlidePercentage(100); // Una tarjeta en pantallas pequeñas
-    } else if (windowWidth <= 1024) {
-      setSlidePercentage(50); // Dos tarjetas en pantallas medianas
-    } else {
-      setSlidePercentage(30); // Tres tarjetas con espacio entre ellas
-    }
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, [windowWidth]);
+const Carousel: React.FC = () => {
+  const settings = {
+    autoplay: true,
+    accessibility:true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 900,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            initialSlide: 2,
+            dots:true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+  };
 
   return (
-    <div className="carousel-container">
-      <Carousel
-        showStatus={false}
-        showArrows={false}
-        showIndicators={true}
-        infiniteLoop={true}
-        showThumbs={false}
-        autoPlay={true}
-        interval={3000}
-        swipeable={true}
-        emulateTouch={true}
-        centerMode={true}
-        centerSlidePercentage={slidePercentage}
-        dynamicHeight={false}
-      >
+    <div className='carousel-container'>
+      <div className='sucursal'>
+        Conoce nuestras sucursales
+      </div>
+      <Slider {...settings}>
         {images.map((image, index) => (
           <div key={index} className="carousel-slide">
-            <img src={image.src} alt={image.alt} />
-            <div>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati iusto excepturi dolorum ut rem ad vitae nostrum voluptatum deserunt laboriosam tempore atque quis, vero est! Omnis magnam quibusdam consectetur exercitationem.
+            <div className='carousel-image' style={{
+              backgroundImage: `url(${image.src})`,
+            }}>
+              <div className="carousel-text">{image.legend}</div>
             </div>
           </div>
         ))}
-      </Carousel>
-    </div>
+      </Slider>
+      <div className='button-surcursales'>
+        <button className='button button-primary sucursales'>
+          Todas las sucursales
+        </button>
+      </div>
+      </div>
   );
 };
 
-export default ResponsiveCarousel;
+export default Carousel;

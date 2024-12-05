@@ -108,6 +108,31 @@
     .services2 {
       display: flex;
       flex-direction: column;
+      gap: 2rem;
+    }
+    .service-icon{
+      margin: 0 auto;
+    }
+    .service-right-card{
+      padding: 2rem;
+    }
+    .service-right-card h3{
+      width: 100%;
+      font-size: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0;
+    }
+    .service-right-card p{
+      text-align: center;
+      line-height: 1.2;
+      font-size: 1rem;
+    }
+    .button.button-primary.service{
+      font-size: 0.8rem;
+      margin: auto;
     }
   }
   

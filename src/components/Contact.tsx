@@ -53,7 +53,7 @@ export default function Contact() {
             <input type="email" className="form-input" placeholder="Ingresa tu correo electrónico" />
           </div>
           <button type="submit" className="button button-primary form-submit">
-            Enviar Consulta
+            Enviar
           </button>
         </form>
       </div>

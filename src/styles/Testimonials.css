@@ -2,97 +2,107 @@
 .testimonial-page {
   background-color: #f8f9fa;
   position: relative;
-  overflow: hidden; /* Evita que se desborde el SVG */
+  overflow: hidden;
+  padding: 2rem 0;
   z-index: 1;
 }
 
 /* Fondo SVG curvo detrás del slider */
 .curve-background {
+  justify-self: center;
+  background-position: center;
+  background-repeat: no-repeat;
   background-color: #f8f9fa;
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100vw; /* Ocupa todo el ancho */
-  height: 300px; /* Ajusta según el diseño */
-  z-index: -1; /* Coloca detrás del contenido */
+  left: -50vw;
+  width: 200vw;
+  height: 520px;
+  z-index: -1;
 }
 
 /* Carrusel */
 .testimonial-carousel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 80%;
+  max-width: 1200px;
+  padding-bottom: 6rem;
   margin: 0 auto;
-  position: relative;
-  z-index: 2; /* Asegura que esté sobre el fondo */
 }
 
-.testimonial-container {
-  display: flex;
-  overflow: hidden;
-  width: 100%;
-}
-
-.testimonial-slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
+.testimonial-carousel h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--title-primary);
+  font-weight: 600;
 }
 
 .testimonial-slide {
-  flex: 0 0 calc(100% / 2); /* Por defecto muestra 2 tarjetas */
+  width: 140px;
+  height: 200px;
   padding: 1rem;
+  margin-bottom: 2rem;
   box-sizing: border-box;
 }
 
 .testimonial-content {
   background: white;
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 20px;
+  padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 250px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
-/* Controles del carrusel */
-.carousel-controls {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-.carousel-button {
-  background: none;
-  border: none;
-  cursor: pointer;
+.testimonial-author {
+  font-size: 1.2rem;
+  font-weight: bold;
   color: var(--primary);
 }
 
-.carousel-dots {
-  display: flex;
-  gap: 0.5rem;
+.testimonial-role {
+  font-size: 1rem;
+  color: gray;
 }
 
-.dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: white;
-  cursor: pointer;
+.testimonial-rating {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--primary);
 }
 
-.dot.active {
-  background: var(--primary);
+/* Dots */
+.slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 18px;
+  line-height: 20px;
+  opacity: 0.25;
+  color: var(--primary);
 }
 
-/* RESPONSIVE: Ajusta a 1 tarjeta en pantallas pequeñas */
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: var(--primary);
+}
+
+
 @media (max-width: 768px) {
-  .testimonial-slide {
-    flex: 0 0 100%; /* Ahora muestra 1 tarjeta a la vez */
+  .curve-background{
+    height: 400px;
+  }
+  .testimonial-carousel h2 {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-content {
+    font-size: 0.9rem;
   }
 }

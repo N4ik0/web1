@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import ResponsiveCarousel from './components/ResponsiveCarousel';
+import Branch from './components/Branch';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <main>
         <Hero />
         <Services />
-        <ResponsiveCarousel/>
+        <Branch/>
         <Testimonials />
         <Contact />
       </main>

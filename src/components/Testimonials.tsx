@@ -1,30 +1,42 @@
-import { useState, useEffect } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
-import testimonios from './testimonios';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import '../styles/Testimonials.css';
+import testimonials from './testimonios'; // Importa el array de testimonios
 
-export default function Testimonials() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const slidesToShow = 2;
-  const maxIndex = testimonios.length - slidesToShow;
-
-  const nextSlide = () => {
-    setCurrentIndex((current) => (current >= maxIndex ? 0 : current + 1));
+const Testimonials: React.FC = () => {
+  const settings = {
+    autoplay: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
-
-  const prevSlide = () => {
-    setCurrentIndex((current) => (current <= 0 ? maxIndex : current - 1));
-  };
-
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
-    return () => clearInterval(timer);
-  }, []);
 
   return (
     <div className="testimonial-page">
-      {/* Fondo curvo detrás del slider */}
-      <svg
+            {/* Fondo curvo detrás del slider */}
+            <svg
         className="curve-background"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 1440 320"
@@ -38,52 +50,28 @@ export default function Testimonials() {
 
 
       {/* Contenedor del slider */}
+
       <div className="testimonial-carousel">
-        <div className="testimonial-container">
-          <div
-            className="testimonial-slides"
-            style={{
-              transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)`,
-            }}
-          >
-            {testimonios.map((testimonial, index) => (
-              <div key={index} className="testimonial-slide">
-                <div className="testimonial-content">
-                  <div className="testimonial-rating">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} size={20} fill="#3D52D5" color="#3D52D5" />
-                    ))}
-                  </div>
-                  <p className="testimonial-text">"{testimonial.text}"</p>
-                  <p className="testimonial-author">{testimonial.author}</p>
-                  <p className="testimonial-role">{testimonial.role}</p>
+        <h2>Lo que dicen nuestros clientes</h2>
+        <Slider {...settings}>
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-slide">
+              <div className="testimonial-content">
+                <p className="testimonial-text">"{testimonial.text}"</p>
+                <div className="testimonial-author">
+                  <strong>{testimonial.author}</strong>
+                  <span className="testimonial-role"> - {testimonial.role}</span>
+                </div>
+                <div className="testimonial-rating">
+                  {'⭐'.repeat(testimonial.rating)}
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Controles del carrusel */}
-        <div className="carousel-controls">
-          <button onClick={prevSlide} className="carousel-button">
-            <ChevronLeft size={24} />
-          </button>
-          <div className="carousel-dots">
-            {[...Array(testimonios.length - slidesToShow + 1)].map(
-              (_, index) => (
-                <span
-                  key={index}
-                  className={`dot ${index === currentIndex ? 'active' : ''}`}
-                  onClick={() => setCurrentIndex(index)}
-                />
-              )
-            )}
-          </div>
-          <button onClick={nextSlide} className="carousel-button">
-            <ChevronRight size={24} />
-          </button>
-        </div>
+            </div>
+          ))}
+        </Slider>
       </div>
     </div>
   );
-}
+};
+
+export default Testimonials;

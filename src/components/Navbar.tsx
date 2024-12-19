@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, Phone, X } from 'lucide-react';
 import '../styles/Navbar.css';
-import '../styles/global.css';
+import '../styles/global.css';  
 import Logo from '../assets/logo/Global.png';
 
 export default function Navbar() {
@@ -48,7 +48,7 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <a href="tel:+56912345678" className={contactClass}>
+            <a href="https://wa.me/56912345678" target='_blank' className={contactClass}>
               <Phone size={18} />
               +569 1234 5678
             </a>

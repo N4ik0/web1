@@ -29,6 +29,7 @@
 
 /* Contenedor del formulario */
 .contact-form {
+  position: relative;
   width: auto;
   background-color: white;
   padding: 3rem 2rem;
@@ -141,7 +142,13 @@
  
  
   
- 
+ .form-message{
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
+  width: 100%;
+ }
   
 
   

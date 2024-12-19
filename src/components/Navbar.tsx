@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, Phone, X } from 'lucide-react';
 import '../styles/Navbar.css';
 import '../styles/global.css';
+import Logo from '../assets/logo/Global.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <a href="/" className={logoClass}>
-          <img className='logo-img' src="/web1/src/assets/logo/Global.png" alt="Global Defensa" />
+          <img className='logo-img' src={Logo} alt="Global Defensa" />
           <h1> Global Defensa</h1>
         </a>
 

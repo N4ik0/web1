@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center; /* Centra el contenido */
   align-items: center;
-  height: 80px;
+  height: 120px;
   padding: 0 1rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -27,8 +27,18 @@
   font-size: 1.1rem;
 }
 
+
+.logo-img{
+  width: 150px;
+  height: 150px;
+}
+
 .navbar-logo {
-  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 450px;
+  font-size: 1.2rem;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -138,14 +148,18 @@
     display: block;
     color: var(--primary);
   }
-  .navbar-logo {
-    font-size: 1.7rem;
+  .logo-img{
+    width: 100px;
+    height: 100px;
+  }
+  .navbar-logo h1{
+    font-size: 1.2rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
   }
 
-  .navbar-logo.sticky {
+  .navbar-logo.sticky h1{
     color: var(--primary);
   }
 

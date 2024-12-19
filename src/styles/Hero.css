@@ -2,7 +2,8 @@
     background: linear-gradient(to top, rgba(24, 39, 136, 1), rgba(172, 183, 255, 0.2)),
     url("../assets/images/main1.jpg");
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
     color: white;
     padding-top: 18rem;
     padding-bottom: 5rem;

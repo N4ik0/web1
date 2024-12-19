@@ -28,7 +28,8 @@ export default function Navbar() {
       <div className="navbar-container">
         {/* Logo */}
         <a href="/" className={logoClass}>
-          Libertad Deuda
+          <img className='logo-img' src="/web1/src/assets/logo/Global.png" alt="Global Defensa" />
+          <h1> Global Defensa</h1>
         </a>
 
         {/* Botón de menú */}

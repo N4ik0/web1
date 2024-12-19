@@ -61,7 +61,7 @@ const Branch: React.FC = () => {
   return (
     <div className='carousel-container'>
       <div className='sucursal'>
-        Conoce nuestras sucursales
+        Estamos presentes en estas regiones
       </div>
       <Slider {...settings}>
         {images.map((image, index) => (
@@ -75,9 +75,9 @@ const Branch: React.FC = () => {
         ))}
       </Slider>
       <div className='button-surcursales'>
-        <button className='button button-primary sucursales'>
+        {/* <button className='button button-primary sucursales'>
           Todas las sucursales
-        </button>
+        </button> */}
       </div>
       </div>
   );

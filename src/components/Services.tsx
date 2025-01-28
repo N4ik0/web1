@@ -106,8 +106,8 @@ export default function Services() {
           </div>
         </div>
       </div>
-      <div className='separador'>
-
+      <div className='separator-line'>
+          <div className='line'></div>
       </div>
     </section>
   );

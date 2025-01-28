@@ -140,9 +140,16 @@
   }
   
 
-  .separador{
+  .separator-line{
     border-radius: 10px;
-    justify-self: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .line{
+    border-radius: 10px;
     width: 8rem;
     background-color: var(--primary);
     height: 4px;

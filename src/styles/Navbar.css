@@ -63,7 +63,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
-  padding-bottom: 5px; /* Espacio para la línea decorativa */
+  padding-bottom: -5px; /* Espacio para la línea decorativa */
 }
 
 .navbar-link.sticky {

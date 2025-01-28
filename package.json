@@ -1,11 +1,9 @@
 {
-  "homepage": "https://n4ik0.github.io/web1/",
   "name": "defensa-deudores-clone",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "deploy": "npm run build && gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
@@ -13,7 +11,7 @@
   },
   "dependencies": {
     "emailjs-com": "^3.2.0",
-    "lucide-react": "^0.344.0",
+    "lucide-react": "^0.474.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-phone-input-2": "^2.15.1",

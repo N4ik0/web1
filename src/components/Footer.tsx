@@ -1,5 +1,6 @@
-import { Facebook, Twitter, Instagram, Linkedin, MapPin, Mail, PhoneCall, Clock } from "lucide-react"
+import { Facebook, Youtube, Instagram, MapPin, Mail, PhoneCall, Clock } from "lucide-react"
 import '../styles/global.css';
+import tiktok from '../assets/logo/tiktok.svg';
 export default function Footer (){
     return(
         <footer style={{
@@ -18,13 +19,13 @@ export default function Footer (){
                       <Facebook size={24} />
                     </a>
                     <a href="#" className="social-link">
-                      <Twitter size={24} />
+                      <Youtube size={24} />
                     </a>
                     <a href="#" className="social-link">
                       <Instagram size={24} />
                     </a>
                     <a href="#" className="social-link">
-                      <Linkedin size={24} />
+                      <img src={tiktok} alt="TikTok" style={{ width: '26px' }} />
                     </a>
                   </div>
                 </div>
@@ -52,15 +53,15 @@ export default function Footer (){
                   <ul className="footer-links">
                     <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <MapPin size={18} />
-                      Av. Principal 123, Santiago
+                      Julio Vranken 1094, Talagante
                     </li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <Mail size={18} />
-                      contacto@libertaddeuda.cl
+                      tsindeudas@gmail.com
                     </li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <PhoneCall size={18} />
-                      +56 9 1234 5678
+                      +56 9 5537 9711
                     </li>
                     <li style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                       <Clock size={18} />
@@ -75,7 +76,7 @@ export default function Footer (){
                 padding: '2rem 0', 
                 textAlign: 'center'
               }}>
-                <p>© {new Date().getFullYear()} Libertad Deuda. Todos los derechos reservados.</p>
+                <p>© {new Date().getFullYear()} Global Defensa. Todos los derechos reservados.</p>
               </div>
             </div>
           </footer>

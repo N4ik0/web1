@@ -21,7 +21,7 @@ export default function Navbar() {
   const logoClass = `navbar-logo ${isSticky ? 'sticky' : ''}`;
   const menuButtonClass = `menu-button ${isSticky ? 'sticky' : ''}`;
   const menuClass = `navbar-menu ${isOpen ? 'active' : ''}`;
-  const linkClass = `navbar-link ${isSticky ? 'sticky' : ''}`;
+  const linkClass = `navbar-link ${isSticky ? 'sticky' : ''} flex items-center h-full`;
   const contactClass = `navbar-contact ${isSticky ? 'sticky' : ''}`;
 
   return (
@@ -39,18 +39,18 @@ export default function Navbar() {
         </button>
 
         {/* Menú de navegación */}
-        <ul className={menuClass}>
+        <ul className={`${menuClass} flex items-center`}>
           {['Inicio', 'Servicios', 'Nosotros', 'Contacto'].map((section) => (
-            <li key={section}>
+            <li key={section} className="flex items-center">
               <a href={`#${section.toLowerCase()}`} className={linkClass}>
                 {section}
               </a>
             </li>
           ))}
           <li>
-            <a href="https://wa.me/56912345678" target='_blank' className={contactClass}>
+            <a href="https://wa.me/56955379711" target='_blank' className={contactClass}>
               <Phone size={18} />
-              +569 1234 5678
+              +56 9 5537 9711
             </a>
           </li>
         </ul>

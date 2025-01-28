@@ -55,7 +55,7 @@ export default function Contact() {
   };
 
   return (
-    <section className="contact">
+    <section id='contacto' className="contact">
       <div className="contact-container">
         <div className="text-container">
           <h2 className="contact-heading">¿Necesitas Ayuda con tus Deudas?</h2>
@@ -63,7 +63,7 @@ export default function Contact() {
             Contáctanos para una evaluación gratuita de tu caso. Nuestro equipo de expertos está listo para ayudarte.
           </p>
           <a
-            href="https://wa.me/56912345678"
+            href="https://wa.me/56988789627"
             target="_blank"
             className="button button-primary contact-button"
           >
